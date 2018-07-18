@@ -22,9 +22,7 @@ import org.springframework.web.servlet.view.tiles3.TilesViewResolver;
 @EnableWebMvc   
 public class Config extends WebMvcConfigurerAdapter {  
       
- 
-    
-       /**
+    /**
      * Configure TilesConfigurer.
      */
     @Bean
