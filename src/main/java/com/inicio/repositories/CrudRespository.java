@@ -5,7 +5,6 @@
  */
 package com.inicio.repositories;
 
-import com.inicio.config.MongoConectionV2;
 import com.inicio.models.login.Usuario;
 import com.inicio.repositories.utils.CursorsToObjects;
 import com.mongodb.BasicDBObject;
