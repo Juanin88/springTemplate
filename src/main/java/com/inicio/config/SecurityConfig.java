@@ -12,36 +12,17 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-//    @Autowired
-//    public void configureGlobal(AuthenticationManagerBuilder authenticationMgr) throws Exception {
-//        authenticationMgr.inMemoryAuthentication()
-//                .withUser("jgarfias")
-//                .password("123456")
-//                .authorities("ROLE_USER");
-//
-//    }
-
-//    @Override
-//    protected void configure(HttpSecurity http) throws Exception {
-//        http.authorizeRequests()
-//                .antMatchers("/homePage").access("hasRole('ROLE_USER')")
-//                .and()
-//                .formLogin().loginPage("/loginPage")
-//                .defaultSuccessUrl("/homePage")
-//                .failureUrl("/loginPage?error")
-//                .usernameParameter("username").passwordParameter("password")
-//                .and()
-//                .logout().logoutSuccessUrl("/loginPage?logout");
-//
-//    }
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/**").hasRole("ADMIN")
-                .anyRequest()
-                .authenticated()
+                .antMatchers("/homePage").access("hasRole('ROLE_ADMIN')")
                 .and()
-                .formLogin();
+                .formLogin().loginPage("/loginPage")
+                .defaultSuccessUrl("/homePage")
+                .failureUrl("/loginPage?error")
+                .usernameParameter("username").passwordParameter("password")
+                .and()
+                .logout().logoutSuccessUrl("/loginPage?logout");
     }
 
     @Override
