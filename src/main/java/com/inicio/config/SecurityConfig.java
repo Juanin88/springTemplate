@@ -1,5 +1,6 @@
 package com.inicio.config;
 
+import com.inicio.service.MyUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -11,26 +12,42 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Autowired
-    public void configureGlobal(AuthenticationManagerBuilder authenticationMgr) throws Exception {
-        authenticationMgr.inMemoryAuthentication()
-                .withUser("jgarfias")
-                .password("123456")
-                .authorities("ROLE_USER");
-        
-    }
+//    @Autowired
+//    public void configureGlobal(AuthenticationManagerBuilder authenticationMgr) throws Exception {
+//        authenticationMgr.inMemoryAuthentication()
+//                .withUser("jgarfias")
+//                .password("123456")
+//                .authorities("ROLE_USER");
+//
+//    }
 
+//    @Override
+//    protected void configure(HttpSecurity http) throws Exception {
+//        http.authorizeRequests()
+//                .antMatchers("/homePage").access("hasRole('ROLE_USER')")
+//                .and()
+//                .formLogin().loginPage("/loginPage")
+//                .defaultSuccessUrl("/homePage")
+//                .failureUrl("/loginPage?error")
+//                .usernameParameter("username").passwordParameter("password")
+//                .and()
+//                .logout().logoutSuccessUrl("/loginPage?logout");
+//
+//    }
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/homePage").access("hasRole('ROLE_USER')")
+                .antMatchers("/**").hasRole("ADMIN")
+                .anyRequest()
+                .authenticated()
                 .and()
-                .formLogin().loginPage("/loginPage")
-                .defaultSuccessUrl("/homePage")
-                .failureUrl("/loginPage?error")
-                .usernameParameter("username").passwordParameter("password")
-                .and()
-                .logout().logoutSuccessUrl("/loginPage?logout");
-
+                .formLogin();
     }
+
+    @Override
+    public void configure(AuthenticationManagerBuilder builder)
+            throws Exception {
+        builder.userDetailsService(new MyUserDetailsService());
+    }
+
 }
