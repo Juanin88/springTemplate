@@ -1,4 +1,4 @@
-package com.inicio.security.config;
+package com.inicio.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -9,7 +9,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 
 @Configuration
 @EnableWebSecurity
-public class LoginSecurityConfig extends WebSecurityConfigurerAdapter {
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder authenticationMgr) throws Exception {
@@ -17,6 +17,7 @@ public class LoginSecurityConfig extends WebSecurityConfigurerAdapter {
                 .withUser("jgarfias")
                 .password("123456")
                 .authorities("ROLE_USER");
+        
     }
 
     @Override
