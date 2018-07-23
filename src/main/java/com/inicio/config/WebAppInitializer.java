@@ -5,14 +5,13 @@
  */
 package com.inicio.config;
 
-import com.inicio.config.ApplicationConfig;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-public class SpringMVCWebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
-		return new Class[] { ApplicationConfig.class };
+		return new Class[] { AppConfig.class };
 	}
 
 	@Override

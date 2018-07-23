@@ -17,7 +17,7 @@ import org.springframework.web.servlet.view.JstlView;
 @Configuration
 @ComponentScan({ "com.inicio.*" })
 @Import(value = { SecurityConfig.class })
-public class ApplicationConfig {
+public class AppConfig {
 	@Bean
 	public InternalResourceViewResolver viewResolver() {
 		InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
