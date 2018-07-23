@@ -15,6 +15,7 @@
         <jstl.version>1.2</jstl.version>
         <javax.servlet.version>3.0.1</javax.servlet.version>
         <spring.security.version>4.2.7.RELEASE</spring.security.version>
+        <jsp.api.version>2.2</jsp.api.version>
 
     </properties>
     
@@ -57,7 +58,21 @@
             <version>${jstl.version}</version>  
         </dependency>  
     
-        
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>${spring.security.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>${spring.security.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>jsp-api</artifactId>
+            <version>${jsp.api.version}</version>
+        </dependency>
     </dependencies>
  
     <build>
