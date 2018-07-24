@@ -18,7 +18,7 @@ import org.bson.types.ObjectId;
  *
  * @author jgarfias2
  */
-public class CrudRespository extends MongoConectionV2 {
+public class CrudRespository extends MongoConfig {
 
     public CursorsToObjects cto = new CursorsToObjects();
 

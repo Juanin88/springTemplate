@@ -15,13 +15,13 @@ import com.mongodb.client.MongoDatabase;
  *
  * @author jgarfias
  */
-public class MongoConectionV2 {
+public class MongoConfig {
 
     private MongoDatabase database;
 
     private MongoClient mongoClient;
 
-    public MongoConectionV2() {
+    public MongoConfig() {
 
         //this.mongoClient = new MongoClient(new MongoClientURI("mongodb+srv://jgarfias:admin123571113@cluster0-ea6qn.mongodb.net/SantanderClientesPagos?connectTimeoutMS=3000&retryWrites=true"));
         this.mongoClient = new MongoClient("localhost", 27017);
