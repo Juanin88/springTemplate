@@ -81,4 +81,10 @@
     </definition> 
     <!-- End Clientes Controllers Views-->
 
+    <!-- Start Home Controller -->
+    <definition name="home/index" extends="base-definition">  
+        <put-attribute name="title" value="Welcome" />  
+        <put-attribute name="body" value="/WEB-INF/views/pages/home/index.jsp" />  
+    </definition>  
+    <!-- End Home Controller -->
 </tiles-definitions>

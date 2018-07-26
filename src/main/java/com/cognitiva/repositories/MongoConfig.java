@@ -23,8 +23,8 @@ public class MongoConfig {
 
     public MongoConfig() {
 
-        //this.mongoClient = new MongoClient(new MongoClientURI("mongodb+srv://jgarfias:admin123571113@cluster0-ea6qn.mongodb.net/SantanderClientesPagos?connectTimeoutMS=3000&retryWrites=true"));
-        this.mongoClient = new MongoClient("localhost", 27017);
+        this.mongoClient = new MongoClient(new MongoClientURI("mongodb+srv://jgarfias:admin123571113@cluster0-ea6qn.mongodb.net/SantanderClientesPagos?connectTimeoutMS=3000&retryWrites=true"));
+        //this.mongoClient = new MongoClient("localhost", 27017);
         database = mongoClient.getDatabase("SantanderClientesPagos");
 
         setDatabase(database);

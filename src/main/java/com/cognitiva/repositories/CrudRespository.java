@@ -22,13 +22,14 @@ public class CrudRespository extends MongoConfig {
 
     public CursorsToObjects cto = new CursorsToObjects();
 
-
     public Usuario findByName(String username) {
         MongoCollection<Document> collection = getDatabase().getCollection("Usuarios");
         Usuario u = new Usuario();
         try {
-            MongoCursor<Document> cursor = collection.find(eq("username", username  )).iterator();
-            u = cto.cursorToObj(cursor, new Usuario());            
+            MongoCursor<Document> cursor = collection.find(eq("username", username)).iterator();
+            u = cto.cursorToObj(cursor, new Usuario());
+        } catch (Exception e) {
+            System.out.println("Error " + e.toString());
         } finally {
             closeConection();
         }

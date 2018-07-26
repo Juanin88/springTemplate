@@ -36,12 +36,12 @@ function fillGraphs(data) {
     var pie = new d3pie("pieChart", {
         "header": {
             "title": {
-                "text": "Resultados de Campaña",
+                "text": "Resultados de Campa\u00f1a",
                 "fontSize": 22,
                 "font": "verdana"
             },
             "subtitle": {
-                "text": "Códigos de resultados hasta el momento en la campaña",
+                "text": "C\u00F3digos de resultados hasta el momento en la campa\u00f1a",
                 "color": "#999999",
                 "fontSize": 10,
                 "font": "verdana"

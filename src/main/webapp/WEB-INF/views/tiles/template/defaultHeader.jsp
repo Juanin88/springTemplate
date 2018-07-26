@@ -4,7 +4,7 @@
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="index.htm">Mï¿½dulo de Gestiï¿½n de Campaï¿½as</a>
+    <a class="navbar-brand" href="index.htm">Módulo de Gestión de Campañas</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -19,14 +19,14 @@
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Campaï¿½as">
                 <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseCampanas" data-parent="#accordionCampanas">
                     <i class="fa fa-fw fa-calendar"></i>
-                    <span class="nav-link-text">Campaï¿½as</span>
+                    <span class="nav-link-text">Campañas</span>
                 </a>
                 <ul class="sidenav-second-level collapse" id="collapseCampanas">
                     <li>
                         <a href="<c:url value='/campaign/index.htm' />">Consultar</a>
                     </li>
                     <li>
-                        <a href="<c:url value='/campaign/newCampaign.htm' />">Nueva Campaï¿½a</a>
+                        <a href="<c:url value='/campaign/newCampaign.htm' />">Nueva Campaña</a>
                     </li>
                     <li>
                         <a href="<c:url value='/campaign/campaignsInitialMessages.htm' />">Mensaje Inicial</a>
