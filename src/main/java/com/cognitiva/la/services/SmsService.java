@@ -26,8 +26,6 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.http.client.ClientHttpRequestFactory;
@@ -62,15 +60,12 @@ public class SmsService {
 
         int status = connection.getResponseCode();
         StringBuilder sb = new StringBuilder();
-
-        System.out.println("Estatus : " + status);
         if (status == 200) {
             try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(connection.getInputStream()))) {
                 String line;
                 while ((line = bufferedReader.readLine()) != null) {
                     sb.append(line).append("\n");
                 }
-                System.out.println(sb.toString());
             } catch (IOException ioex) {
                 System.out.println("Ocurrió un error al procesar la respuesta de sendSmsSingle -> " + ioex.getMessage());
             }
@@ -107,15 +102,11 @@ public class SmsService {
 
         List<Sms> smss = new ArrayList<>();
 
-        //System.out.println("Clientes " + clientes.toString());
         for (CampaignCliente campaignCliente : campaignClientes) {
             Sms message = new Sms();
 
             message.setMessageId(st.getClave() + "-" + campaignCliente.getTelSms().replace("+", "") + "-" + campaignCliente.getNoCuenta());
             message.setTo(campaignCliente.getTelSms());
-
-            DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
-            String reportDate = df.format(campaign.getFechaLimitePagoCampaign());
 
             String noCuenta = campaignCliente.getNoCuenta();
             String claveCliente = campaignCliente.getClaveCliente();

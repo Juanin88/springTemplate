@@ -102,7 +102,7 @@ public class ApiController {
 
         cr.update(campaign);
         URL url = new URL("https://dev-sms-service.mybluemix.net/rest/sms-rest/sendSmsGC");
-        //smsService.send(jsonInString, url);
+        smsService.send(jsonInString, url);
 
         return new ResponseEntity(smsMessage, HttpStatus.OK);
 
@@ -139,7 +139,7 @@ public class ApiController {
         String jsonInString = mapper.writeValueAsString(smsMessage);
 
         URL url = new URL("https://dev-sms-service.mybluemix.net/rest/sms-rest/sendSmsGC");
-        //smsService.send(jsonInString, url);
+        smsService.send(jsonInString, url);
 
         try {
             CampaignRepository campR = new CampaignRepository();
