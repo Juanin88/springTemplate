@@ -29,7 +29,6 @@ $(function () {
         $.unblockUI();
     });
 
-
 });
 
 function fillGraphs(data) {
