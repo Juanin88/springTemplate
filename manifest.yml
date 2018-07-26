@@ -1,0 +1,7 @@
+---
+applications:
+ - name: dev-gestor-campanias
+   random-route: true
+   path: target/InicioSpring-1.0-SNAPSHOT.war
+   memory: 2GB
+   instances: 1
