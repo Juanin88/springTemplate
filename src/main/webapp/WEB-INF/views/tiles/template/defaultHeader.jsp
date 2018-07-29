@@ -23,13 +23,13 @@
                 </a>
                 <ul class="sidenav-second-level collapse" id="collapseCampanas">
                     <li>
-                        <a href="<c:url value='/campaign/index.htm' />">Consultar</a>
+                        <a href="#">Consultar</a>
                     </li>
                     <li>
-                        <a href="<c:url value='/campaign/newCampaign.htm' />">Nueva Campaña</a>
+                        <a href="#">Nueva Campaña</a>
                     </li>
                     <li>
-                        <a href="<c:url value='/campaign/campaignsInitialMessages.htm' />">Mensaje Inicial</a>
+                        <a href="#">Mensaje Inicial</a>
                     </li>
                 </ul>
             </li>
@@ -40,12 +40,12 @@
                 </a>
                 <ul class="sidenav-second-level collapse" id="collapseClientes">
                     <li>
-                        <a href="<c:url value='/clients/index.htm' />">Consultar</a>
+                        <a href="#">Consultar</a>
                     </li>
                 </ul>
             </li>
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-                <a class="nav-link" href="<c:url value='/home/index.htm' />">
+                <a class="nav-link" href="#">
                     <i class="fa fa-fw fa-area-chart"></i>
                     <span class="nav-link-text">Reportes</span>
                 </a>
