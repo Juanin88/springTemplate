@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.cognitiva.la.d3reports;
+package com.system.la.d3reports;
 
 /**
  *

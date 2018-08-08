@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.cognitiva.config;
+package com.system.config;
 
 import java.io.IOException;
 import org.springframework.context.annotation.Bean;
@@ -22,7 +22,7 @@ import org.springframework.web.servlet.view.tiles3.TilesViewResolver;
 
 @EnableWebMvc
 @Configuration
-@ComponentScan({"com.cognitiva.*"})
+@ComponentScan({"com.system.*"})
 @Import(value = {SecurityConfig.class})
 public class AppConfig extends WebMvcConfigurerAdapter {
 

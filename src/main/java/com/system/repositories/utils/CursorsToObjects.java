@@ -3,10 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.cognitiva.repositories.utils;
+package com.system.repositories.utils;
 
-import com.cognitiva.models.login.Usuario;
 import com.mongodb.client.MongoCursor;
+import com.system.models.login.Usuario;
+
 import org.bson.Document;
 
 /**

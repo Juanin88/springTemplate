@@ -1,4 +1,4 @@
-package com.cognitiva.controllers;
+package com.system.controllers;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

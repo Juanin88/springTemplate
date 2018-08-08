@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.cognitiva.repositories;
+package com.system.repositories;
 
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientOptions;
@@ -23,8 +23,8 @@ public class MongoConfig {
 
     public MongoConfig() {
 
-        this.mongoClient = new MongoClient(new MongoClientURI("mongodb+srv://jgarfias:admin123571113@cluster0-ea6qn.mongodb.net/SantanderClientesPagos?connectTimeoutMS=3000&retryWrites=true"));
-        //this.mongoClient = new MongoClient("localhost", 27017);
+        //this.mongoClient = new MongoClient(new MongoClientURI("mongodb+srv://jgarfias:admin123571113@cluster0-ea6qn.mongodb.net/SantanderClientesPagos?connectTimeoutMS=3000&retryWrites=true"));
+        this.mongoClient = new MongoClient("localhost", 27017);
         database = mongoClient.getDatabase("SantanderClientesPagos");
 
         setDatabase(database);
