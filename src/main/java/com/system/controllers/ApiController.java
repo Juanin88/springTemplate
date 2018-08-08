@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.cognitiva.controllers;
-
-import com.cognitiva.la.d3reports.Content;
-import com.cognitiva.la.d3reports.Contents;
+package com.system.controllers;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.system.la.d3reports.Content;
+import com.system.la.d3reports.Contents;
+
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -52,8 +52,6 @@ public class ApiController {
         contents.setColor("red");
         contents.setLabel("color");
         contents.setValue(11);
-
-
 
         return new ResponseEntity(contents, HttpStatus.OK);
 

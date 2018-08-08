@@ -3,22 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.cognitiva.controllers;
+package com.system.controllers;
 
+import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-/**
- *
- * @author jgarfias2
- */
 @Controller
-@RequestMapping("/test")
-public class TestController {
-   
-    @RequestMapping(value = {"/"}, method = RequestMethod.GET)
-    public String test() {
-        return "test";
+@RequestMapping("/")
+public class IndexController {
+
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String index(HttpServletRequest request, Model model) {
+          
+        return "index";
     }
 }
